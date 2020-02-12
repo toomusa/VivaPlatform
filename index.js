@@ -7,7 +7,7 @@ const app = express();
 const {seedDb} = require("./models/seedDb");
 
 // Database setup
-mongoose.connect("mongodb://localhost/vivadb", {useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true})
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/vivadb", {useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true})
 
 // Middlewares setup
 app.use(express.json());
