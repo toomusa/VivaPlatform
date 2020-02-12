@@ -1,0 +1,20 @@
+.header-container {
+  background-color: whitesmoke;
+  text-align: center;
+}
+
+.brand-logo {
+  max-height: 80px;
+  padding: 10px 5px;
+  float: left;
+}
+
+.meda-logo {
+  max-height: 80px;
+  padding: 10px 5px;
+  float: right;
+}
+
+.logo-div {
+  /* margin-bottom: 10px; */
+}

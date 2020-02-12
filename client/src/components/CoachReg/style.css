@@ -1,0 +1,18 @@
+.label-field {
+  min-width: 100px;
+}
+
+.input-field {
+  color: black;
+}
+
+.form-field {
+  width: 250px;
+  min-width: 250px;
+  max-width: 250px;
+  float: right;
+}
+
+.modal-content {
+  line-height: 1.5;
+}

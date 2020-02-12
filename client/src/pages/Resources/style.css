@@ -1,0 +1,32 @@
+#subheader {
+  font-size: 16px;
+  text-align: center;
+  color: #71004b;
+  margin: 10px 0;
+}
+
+#lib-header {
+  margin: 20px 0;
+}
+
+.table {
+  border-bottom: 1px solid #dddddd;
+  font-size: 18px;
+}
+
+.table>thead>tr>th, 
+.table>tbody>tr>th, 
+.table>tfoot>tr>th, 
+.table>thead>tr>td, 
+.table>tbody>tr>td, 
+.table>tfoot>tr>td{
+  padding: 10px;
+}
+
+.download {
+  text-align: center;
+}
+
+.heading {
+  font-weight: bold;
+}

@@ -1,0 +1,62 @@
+.task-container {
+
+}
+
+.milestone-block-plain {
+  font-size: 20px;
+  padding: 10px 20px 10px 43px;
+  margin: 10px 1% 0px 1%;
+  width: 98%;
+  text-align: left;
+  border-radius: 7px;
+  border: 1px solid green;
+  box-shadow: 0px -3px 5px rgb(50, 205, 50, 0.7) inset;
+}
+
+.milestone-block {
+  font-size: 20px;
+  padding: 10px 20px 10px 43px;
+  margin: 10px 1% 0px 1%;
+  width: 98%;
+  text-align: left;
+  border-radius: 7px;
+  border: 1px solid green;
+  box-shadow: 0px -3px 5px rgb(50, 205, 50, 0.7) inset;
+}
+
+.milestone-block:hover {
+  cursor: pointer;
+}
+
+.task-wrapper {
+
+}
+
+.task-wrap {
+  margin: 0px 30px 0px 0px;
+}
+
+.task-div {
+
+}
+
+.task-header {
+  font-weight: bold;
+  font-size: 20px;
+  margin: 20px 0px 0px 89px;
+  padding: 0px 2px 0px 0px;
+}
+
+/* .task-header:after {
+  content: ""; 
+  display: block; 
+  width: 100%;
+  padding-top: 0px; 
+  border-bottom: 0.2px solid darkgray; 
+} */
+
+.task-hr {
+  width: 90.2%;
+  margin: 0px 2% 0px 7.8%;
+  border: 0.2px solid darkgray;
+}
