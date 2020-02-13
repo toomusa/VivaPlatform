@@ -4,7 +4,6 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 const routes = require("./routes");
 const app = express();
-const path = require("path");
 const { seedDb } = require("./models/seedDb");
 
 // Database setup
