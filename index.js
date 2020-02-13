@@ -4,6 +4,7 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 const routes = require("./routes");
 const app = express();
+const path = require("path");
 const { seedDb } = require("./models/seedDb");
 
 // Database setup
@@ -16,6 +17,13 @@ app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 app.use(cors());
 
+// If we are in production, serve our clients build folderuse
+// This folder is created during production only
+
+if (process.env.NODE_ENV === "production") {
+    app.use(express.static("client/build"));
+}
+
 // Error Handling Goes Here
 app.use(routes, (req, res) => {
     // No matching route for URL Found
@@ -25,12 +33,10 @@ app.use(routes, (req, res) => {
     })
 })
 
-// If we are in production, serve our clients build folderuse
-// This folder is created during production only
+app.get('*', (req,res) =>{
+    res.sendFile(path.join(__dirname+'/client/build/index.html'));
+});
 
-if (process.env.NODE_ENV === "production") {
-    app.use(express.static("client/build"));
-}
 
 const PORT = process.env.PORT || 3001;
 
