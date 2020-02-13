@@ -7,7 +7,7 @@ const app = express();
 const { seedDb } = require("./models/seedDb");
 
 // Database setup
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/chatdb", {useNewUrlParser: true, useCreateIndex: true, useFindAndModify: false}, err => {
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/chatdb", {useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true}, err => {
   if (err) console.log(err);
 });
 
@@ -20,6 +20,9 @@ app.use(cors());
 // This folder is created during production only
 if (process.env.NODE_ENV === "production") {
     app.use(express.static("client/build"));
+    app.get("*", (req, res) =>
+        res.sendFile(path.join(__dirname, "./client/build/index.html"))
+    );
 }
 
 // Error Handling Goes Here
