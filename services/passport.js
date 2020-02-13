@@ -1,3 +1,4 @@
+require('dotenv').config()
 const passport      = require("passport");
 const User          = require("../models/User");
 const JwtStrategy   = require("passport-jwt").Strategy;
