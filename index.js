@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 const routes = require("./routes");
 const app = express();
-const {seedDb} = require("./models/seedDb");
+const { seedDb } = require("./models/seedDb");
 
 // Database setup
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/vivadb", {useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true})
