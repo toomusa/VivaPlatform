@@ -13,7 +13,7 @@ export default function(state = INITIAL_STATE, action) {
         case LOAD_ERROR:
             return {...state, error: action.payload };
         case UPDATE_JOURNEY:
-            return {...state, user: {...user, journey: action.payload }};
+            return {...state, user: { journey: action.payload }};
         case TEST_USER:
             return {...state, test: action.payload };
         case LOGOUT_USER:
