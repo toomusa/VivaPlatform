@@ -17,9 +17,6 @@ app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 app.use(cors());
 
-// If we are in production, serve our clients build folderuse
-// This folder is created during production only
-
 if (process.env.NODE_ENV === "production") {
     app.use(express.static("client/build"));
 }
@@ -36,7 +33,6 @@ app.use(routes, (req, res) => {
 app.get('*', (req,res) =>{
     res.sendFile(path.join(__dirname+'/client/build/index.html'));
 });
-
 
 const PORT = process.env.PORT || 3001;
 
