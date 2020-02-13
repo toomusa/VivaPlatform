@@ -1,6 +1,7 @@
 const router = require("express").Router();
 const authMiddlewares = require("../../middlewares/authMiddlewares");
-const passportService = require("../../services/passport")
+const passportService = require("../../services/passport");
+const path = require("path");
 
 router.route("/")
     .get( (req, res) => {

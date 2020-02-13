@@ -49,7 +49,7 @@ class Auth extends Component {
   renderInput = ({ input, label, meta }) => {
     return (
       <span>
-        <input {...input} className="auth-input" placeholder={label} />
+        <input {...input} className="auth-input" placeholder={label} type={input.name} />
         {this.renderErrors(meta)}
       </span>
     )
@@ -92,7 +92,7 @@ class Auth extends Component {
             name="email"
             type="text"
             label={auth.email}
-            autoComplete="off"
+            autoComplete="none"
             className="auth-input"
             component={this.renderInput}
             />
@@ -100,7 +100,7 @@ class Auth extends Component {
             name="password"
             type="password"
             label={auth.password}
-            autoComplete="off"
+            autoComplete="none"
             className="auth-input"
             component={this.renderInput}
             />

@@ -15,8 +15,8 @@ module.exports = {
       client: "Client",
       coach: "Coach",
       partner: "Partner",
-      email: " Email",
-      password: " Password",
+      email: "Email",
+      password: "Password",
       submit: "Submit",
       welcome: "Welcome",
       select: "Select One: "
@@ -195,8 +195,8 @@ module.exports = {
       client: "Cliente",
       coach: "Entrenador",
       partner: "Organización",
-      email: " Correo Electrónico",
-      password: " Contraseña",
+      email: "Correo Electrónico",
+      password: "Contraseña",
       submit: "Enviar",
       welcome: "Bienvenido",
       select: "Seleccione Uno: "

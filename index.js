@@ -4,6 +4,7 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 const routes = require("./routes");
 const app = express();
+const path = require("path");
 const { seedDb } = require("./models/seedDb");
 
 // Database setup
@@ -28,6 +29,7 @@ app.use(routes, (req, res) => {
 
 // If we are in production, serve our clients build folderuse
 // This folder is created during production only
+
 if (process.env.NODE_ENV === "production") {
     app.use(express.static("client/build"));
     app.get("*", (req, res) =>
@@ -39,4 +41,4 @@ const PORT = process.env.PORT || 3001;
 
 app.listen(PORT, () => console.log(`Server started on PORT ${PORT}`))
 
-// seedDb();
+seedDb();
