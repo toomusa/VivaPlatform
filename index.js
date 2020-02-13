@@ -26,14 +26,13 @@ app.use(routes, (req, res) => {
     })
 })
 
-
 // If we are in production, serve our clients build folderuse
 // This folder is created during production only
 
 if (process.env.NODE_ENV === "production") {
     app.use(express.static("client/build"));
     app.get("*", (req, res) =>
-        res.sendFile(path.join(__dirname, "client", "build", "index.html"))
+        res.sendFile(path.join(__dirname, "./client/build/index.html"))
     );
 }
 
