@@ -5,6 +5,7 @@ const path = require("path");
 
 router.route("/")
     .get( (req, res) => {
+        res.setHeader("Content-Type", "text/html");
         res.sendFile(path.resolve('client', 'build', 'index.html'));
     });
 
@@ -14,6 +15,7 @@ router.route("/test")
     })
 
 router.use(function(req, res) {
+    res.setHeader("Content-Type", "text/html");
     res.sendFile(path.resolve('client', 'build', 'index.html'));
     });
 // Auth protected routes
