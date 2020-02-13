@@ -5,7 +5,7 @@ const path = require("path");
 
 router.route("/")
     .get( (req, res) => {
-        res.sendFile('index.html');
+        res.sendFile('index.html', { root: __dirname });
     });
 
 router.route("/test")
@@ -14,7 +14,7 @@ router.route("/test")
     })
 
 router.use(function(req, res) {
-    res.sendFile('index.html');
+    res.sendFile('index.html', { root: __dirname });
     });
 // Auth protected routes
 // router.route("/")
