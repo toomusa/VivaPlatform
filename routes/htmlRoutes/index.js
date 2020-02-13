@@ -13,6 +13,9 @@ router.route("/test")
         res.send(req.user);
     })
 
+router.use(function(req, res) {
+    res.sendFile(path.join(__dirname, "../../client/build/index.html"));
+    });
 // Auth protected routes
 // router.route("/")
 //     .get(authMiddlewares.requireAuth, todoController.getTodos)
