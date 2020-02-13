@@ -25,6 +25,7 @@ app.use(routes, (req, res) => {
     })
 })
 
+
 // If we are in production, serve our clients build folderuse
 // This folder is created during production only
 if (process.env.NODE_ENV === "production") {
